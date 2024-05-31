@@ -1,6 +1,10 @@
+import './layut.scss'
+
 function App() {
   return (
-    <div>Hello World</div>
+    <div className="layut">
+      Hello World
+    </div>
   )
 }
 
