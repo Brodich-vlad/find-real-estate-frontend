@@ -1,4 +1,5 @@
 import "./homePage.scss";
+import SearchBar from "../../components/searchBar/SearchBar";
 
 export default function HomePage() {
   return (
@@ -12,8 +13,7 @@ export default function HomePage() {
             facilis id pariatur fugit quos laudantium temporibus dolor ea
             repellat provident impedit!
           </p>
-          {/* Search bar */}
-          <div>Search Bar</div>
+          <SearchBar />
           <div className='boxes'>
             <div className='box'>
               <h1>16+</h1>
