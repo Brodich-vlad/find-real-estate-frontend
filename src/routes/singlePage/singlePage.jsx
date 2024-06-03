@@ -1,6 +1,6 @@
 import "./singlePage.scss";
 import Slider from "../../components/slider/Slider";
-import { singlePostData } from "../../lib/dummydata";
+import {singlePostData}  from "../../lib/dummydata.js";
 
 function SinglePage() {
   return (
