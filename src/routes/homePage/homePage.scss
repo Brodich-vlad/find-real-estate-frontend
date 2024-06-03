@@ -1,3 +1,5 @@
+@import "../../responsive.scss";
+
 .homePage {
   display: flex;
   height: 100%;
@@ -33,6 +35,9 @@
     position: relative;
     display: flex;
     align-items: center;
+    @include md {
+      display: none;
+    }
 
     img {
       width: 115%;
