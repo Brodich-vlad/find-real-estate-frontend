@@ -14,11 +14,6 @@ function Map({items}) {
 	{items.map(item=>(
 		<Pin item={item} key={item.id}/>
 	))}
-    {/* <Marker position={[52.4797, -1.90269]}>
-      <Popup>
-        A pretty CSS3 popup. <br /> Easily customizable.
-      </Popup>
-    </Marker> */}
   </MapContainer>
   )
 }
