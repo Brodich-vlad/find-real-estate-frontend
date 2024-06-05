@@ -63,10 +63,12 @@
           object-fit: cover;
         }
       }
+
       .close{
         cursor: pointer;
       }
     }
+
     .center{
       height: 350px;
       overflow: scroll;
@@ -91,6 +93,7 @@
         }
       }
     }
+    
     .bottom{
       border-top: 2px solid #f7c14b85;
       height: 60px;
