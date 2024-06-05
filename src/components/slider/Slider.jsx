@@ -1,9 +1,7 @@
-import "./slider.scss"
+import "./slider.scss";
 
 function Slider() {
-  return(
-    <div classNamme='slider'>Slider</div>
-  )
+  return <div classNamme="slider">Slider</div>;
 }
 
-export default Slider
+export default Slider;
