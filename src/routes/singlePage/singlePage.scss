@@ -23,11 +23,23 @@
     .wrapper {
       padding-right: 50px;
 
+      @include lg {
+        padding-right: 20px;
+      }
+      @include md {
+        padding-right: 0px;
+      }
+
       .info {
         margin-top: 50px;
         .top {
           display: flex;
           justify-content: space-between;
+
+          @include sm {
+            flex-direction: column;
+            gap: 20px;
+          }
 
           .post {
             display: flex;
@@ -68,6 +80,10 @@
             background-color: rgba(254, 205, 81, 0.209);
             font-weight: 600;
 
+            @include sm {
+              padding: 20px 50px;
+            }
+
             img {
               width: 50px;
               height: 50px;
@@ -102,6 +118,10 @@
       flex-direction: column;
       gap: 20px;
 
+      @include md {
+        padding: 20px;
+      }
+
       img {
         width: 24px;
         height: 24px;
@@ -126,7 +146,6 @@
           span {
             font-weight: bold;
           }
-
           p {
             font-size: 14px;
           }
@@ -165,30 +184,30 @@
           padding: 10px;
           border-radius: 5px;
         }
+      }
 
-        .mapContainer {
-          width: 100%;
-          height: 200px;
-        }
+      .mapContainer {
+        width: 100%;
+        height: 200px;
+      }
 
-        .buttons {
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+          padding: 20px;
           display: flex;
-          justify-content: space-between;
+          align-items: center;
+          gap: 5px;
+          background-color: white;
+          border: 1px solid #fece51;
+          border-radius: 5px;
+          cursor: pointer;
 
-          button {
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            background-color: white;
-            border: 1px solid #fece51;
-            border-radius: 5px;
-            cursor: pointer;
-
-            img {
-              width: 16px;
-              height: 16px;
-            }
+          img {
+            width: 16px;
+            height: 16px;
           }
         }
       }
