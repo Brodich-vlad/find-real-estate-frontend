@@ -1,5 +1,0 @@
-@mixin sm{
-  @media(max-width: 738px){
-    @content;
-  }
-}
