@@ -1,9 +1,7 @@
 import "./singlePage.scss";
 import Slider from "../../components/slider/Slider";
-
 import Map from "../../components/map/Map";
 import { singlePostData, userData } from "../../lib/dummydata.js";
-
 
 function SinglePage() {
   return (
