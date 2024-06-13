@@ -5,6 +5,7 @@ import apiRequest from '../../lib/apiRequest';
 import "./profilePage.scss";
 
 function ProfilePage() {
+  
 const navigate = useNavigate()
 const handleLogout = async () => {
 
