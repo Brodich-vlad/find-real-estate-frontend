@@ -4,10 +4,9 @@ nav{
 	height: 100px;
 	display: flex;
 	justify-content: space-between;
-    align-items: center;
+  align-items: center;
 
 	a{
-		
 		transition:all 0.4s ease;
 
 		@include sm{
@@ -25,29 +24,27 @@ nav{
 		align-items: center;
 		gap: 50px;
 
-	.logo{
-		font-weight: bold;
-		font-size: 20px;
-		display: flex;
-		align-items: center;
-		gap: 10px;
+		.logo{
+			font-weight: bold;
+			font-size: 20px;
+			display: flex;
+			align-items: center;
+			gap: 10px;
 
-		img{
-			width: 28px;
-		}
-
-		span{
-        @include md{
-	    display: none;
-    }
-
-	    @include sm{
-	    display: initial;
-}
-
-
-		}
+			img{
+				width: 28px;
 			}
+
+			span{
+				@include md{
+					display: none;
+				}
+
+				@include sm{
+					display: initial;
+				}
+			}
+		}
 	}
 
 
@@ -57,7 +54,8 @@ nav{
 		align-items: center;
 		justify-content: flex-end;
 		background-color: #fcf5f3;
-		height: 100%;
+		z-index: 2;
+		//height: 100%;
 
 		@include md {
 			background: transparent;
@@ -82,7 +80,7 @@ nav{
 				margin-right: 20px;
 			}
 
-		    span{
+		  span{
 				@include sm {
 					display: none;
 				}
@@ -150,9 +148,10 @@ nav{
 			}
 
 			@include sm {
-				a {display: initial;}
+				a {
+					display: initial;
+				}
 			}
 		}
 	}
-	
 }
