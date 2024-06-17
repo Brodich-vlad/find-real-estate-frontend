@@ -31,19 +31,7 @@ function ProfileUpdatePage() {
     }
   }
 
-  const handleSubmit = async e => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-
-    const {username, email, password}= Object.fromEntries(formData)
-
-    try {
-      
-    } catch (error) {
-      console.log(error);
-    }
-
-  }
+  
 
   return (
     <div className='profileUpdatePage'>
