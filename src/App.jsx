@@ -7,6 +7,7 @@ import SinglePage from './routes/singlePage/singlePage.jsx'
 import ProfilePage from './routes/profilePage/profilePage.jsx'
 import Register from './components/register/register.jsx'
 import Login from './routes/login/login.jsx'
+import ProfileUpdatePage from './routes/profileUpdatePage/profileUpdatePage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,14 @@ const router = createBrowserRouter([
       {
         path: '/:id',
         element: <SinglePage />
+      },
+      {
+        path: '/profile',
+        element: <ProfilePage />
+      },
+      {
+        path: '/profile/update',
+        element: <ProfileUpdatePage/>
       },
       {
         path: '/login',
