@@ -67,7 +67,7 @@ function ProfileUpdatePage() {
       </div>
       <div className='sideContainer'>
         <img
-          src={avatar || '/noavatar.jpg'}
+          src={avatar || '/noavatar.jpeg'}
           alt='avatar'
           className='avatar'
         />
