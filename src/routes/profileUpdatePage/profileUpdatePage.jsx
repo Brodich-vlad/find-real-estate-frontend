@@ -72,7 +72,7 @@ function ProfileUpdatePage() {
           className='avatar'
         />
         <UploadWidget uwConfig={{
-           cloudName:'lamadev',
+           cloudName:'dvxmqsj7o',
            uploadPreset:'estate',
            multiple:false,
            maxImageFileSize:2000000,
