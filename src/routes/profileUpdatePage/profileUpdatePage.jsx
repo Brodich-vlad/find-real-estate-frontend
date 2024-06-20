@@ -17,7 +17,7 @@ function ProfileUpdatePage() {
     e.preventDefault()
     const formData = new FormData(e.target)
 
-    const { username, email, password  } = Object.fromEntries(formData)
+    const { username, email, password } = Object.fromEntries(formData)
 
     try {
       const res = await apiRequest.put(`/users/${currentUser.id}`, {
@@ -67,12 +67,12 @@ function ProfileUpdatePage() {
       </div>
       <div className='sideContainer'>
         <img
-          src={avatar || '/noavatar.jpg'}
+          src={avatar || '/noavatar.jpeg'}
           alt='avatar'
           className='avatar'
         />
         <UploadWidget uwConfig={{
-           cloudName:'lamadev',
+           cloudName:'dvxmqsj7o',
            uploadPreset:'estate',
            multiple:false,
            maxImageFileSize:2000000,
