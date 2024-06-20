@@ -17,7 +17,7 @@ function ProfileUpdatePage() {
     e.preventDefault()
     const formData = new FormData(e.target)
 
-    const { username, email, password  } = Object.fromEntries(formData)
+    const { username, email, password } = Object.fromEntries(formData)
 
     try {
       const res = await apiRequest.put(`/users/${currentUser.id}`, {
