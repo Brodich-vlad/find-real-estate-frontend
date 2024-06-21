@@ -8,6 +8,7 @@ import ProfilePage from './routes/profilePage/profilePage.jsx'
 import Register from './components/register/register.jsx'
 import Login from './routes/login/login.jsx'
 import ProfileUpdatePage from './routes/profileUpdatePage/profileUpdatePage.jsx'
+import NewPostPage from './routes/newPostPage/newPostPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -27,31 +28,31 @@ const router = createBrowserRouter([
         element: <SinglePage />
       },
       {
-        path: '/profile',
-        element: <ProfilePage />
-      },
-      {
-        path: '/profile/update',
-        element: <ProfileUpdatePage/>
-      },
-      {
         path: '/login',
         element: <Login />
       },
       {
         path: '/register',
         element: <Register />
+      }
+    ],
+  },
+  {
+    path: '/',
+    element:<RequireAuth/>,
+    children: [    
+      {
+        path: '/profile',
+        element: <ProfilePage />
       },
       {
-        path: '/',
-        element:<RequireAuth/>,
-        children: [    
-          {
-            path: '/profile',
-            element: <ProfilePage />
-          },
-        ]
-      }
+        path: '/profile/update',
+        element: <ProfileUpdatePage />
+      },
+      {
+        path: '/add',
+        element: <NewPostPage />
+      },
     ]
   }
 ])
