@@ -4,7 +4,8 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import apiRequest from "../../lib/apiRequest";
 import UploadWidget from '../../components/uploadWidget/UploadWidget';
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+
 
 export default function NewPostPage() {
   const [value,setValue] = useState('')
@@ -14,37 +15,37 @@ export default function NewPostPage() {
   const navigate = useNavigate();
 
   const handleSubmit = async e =>{
-    e.preventDefault()
+    console.log('Form Target:', e.target);
     console.log(e.target)
     const formData = new FormData(e.target)
     const inputs = Object.fromEntries(formData)
-
+  
     try{
       const res = await apiRequest.post('/posts',{
-        postData:{
-          title:inputs.title,
-          price: parseInt(inputs.prise),
-          address:inputs.address,
-          city:inputs.city,
-          bedroom:parseInt(inputs.bedroom),
-          bathroom:parseInt(inputs.bathroom),
-          type:inputs.type,
-          property:inputs.property,
-          latitude:inputs.latitude,
-          longitude:inputs.longitude,
-          images:images
+        postData: {
+          title: inputs.title,
+          price: parseInt(inputs.price),
+          address: inputs.address,
+          city: inputs.city,
+          bedroom: parseInt(inputs.bedroom),
+          bathroom: parseInt(inputs.bathroom),
+          type: inputs.type,
+          property: inputs.property,
+          latitude: inputs.latitude,
+          longitude: inputs.longitude,
+          images: images,
         },
-        postDetail:{
-          desc:value,
-          utilities:inputs.utilities,
-          pet:inputs.pet,
-          income:inputs.income,
-          size:parseInt(inputs.cize),
+        postDetail: {
+          desc: value,
+          utilities: inputs.utilities,
+          pet: inputs.pet,
+          income: inputs.income,
+          size: parseInt(inputs.size),
           school: parseInt(inputs.school),
           bus: parseInt(inputs.bus),
           restaurant: parseInt(inputs.restaurant),
-        }
-      })
+        },
+      });
       navigate("/"+ res.data.id)
     }catch(err){
       console.log(err)
