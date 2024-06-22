@@ -28,9 +28,9 @@ function ProfileUpdatePage() {
       })
       updateUser(res.data);
       navigate('/profile')
-    } catch (error) {
-      console.log(error)
-      setError(error.response.data.message)
+    } catch (err) {
+      console.log(err);
+      setError(err.response.data.message);
     }
   }
 
