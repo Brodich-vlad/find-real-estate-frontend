@@ -1,7 +1,7 @@
 import "./list.scss";
 import Card from "../card/Card";
 
-
+//change
 function List({posts}) {
   console.log(posts)
   return (
