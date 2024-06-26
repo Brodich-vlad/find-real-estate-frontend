@@ -5,7 +5,7 @@ import apiRequest from '../../lib/apiRequest';
 import { format } from 'timeago.js';
 
 export default function Chat ({ chats }) {
-  const [chat, setChat] = useState(null) // Initialize chat as null
+  const [chat, setChat] = useState(null) 
   const { currentUser } = useContext(AuthContext);
 
   const handleOpenChat = async (id, receiver) => {
