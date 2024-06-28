@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import './chat.scss'
 import { AuthContext } from '../../context/AuthContext';
 import apiRequest from '../../lib/apiRequest';
@@ -7,6 +7,13 @@ import { format } from 'timeago.js';
 export default function Chat ({ chats }) {
   const [chat, setChat] = useState(null) 
   const { currentUser } = useContext(AuthContext);
+
+  
+  
+  const messageEndRef = useRef()
+  useEffect(()=>{
+    messageEndRef.current?.scrollIntoView({behavior:"smooth"})
+  },[chat])
 
   const handleOpenChat = async (id, receiver) => {
     try {
@@ -103,7 +110,7 @@ export default function Chat ({ chats }) {
                 <span>{format(message.createdAt)}</span>
               </div>
             ))}
-            {/* <div ref={messageEndRef}></div> */}
+            <div ref={messageEndRef}></div> 
           </div>
           <form onSubmit={handleSubmit} className="bottom">
             <textarea name="text"></textarea>
