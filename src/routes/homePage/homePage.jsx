@@ -16,11 +16,11 @@ export default function HomePage () {
             Welcome to Real Estate, your ultimate destination for finding your
             dream home. With over 16 years of experience, our team is dedicated
             to providing you with the best real estate options to suit your
-            needs. Whether you&apos;re looking to buy, sell, or rent, we are here to
-            help you every step of the way. Our platform features a wide range
-            of properties, from cozy apartments to luxurious homes, all ready
-            for you to explore. Discover the perfect property today and make
-            your real estate dreams come true with us!
+            needs. Whether you&apos;re looking to buy, sell, or rent, we are
+            here to help you every step of the way. Our platform features a wide
+            range of properties, from cozy apartments to luxurious homes, all
+            ready for you to explore. Discover the perfect property today and
+            make your real estate dreams come true with us!
           </p>
           <SearchBar />
           <div className='boxes'>
