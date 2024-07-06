@@ -1,11 +1,10 @@
-import { useContext } from "react";
-import SearchBar from "../../components/searchBar/SearchBar";
-import "./homePage.scss";
-import { AuthContext } from "../../context/AuthContext";
+import { useContext } from 'react'
+import SearchBar from '../../components/searchBar/SearchBar'
+import './homePage.scss'
+import { AuthContext } from '../../context/AuthContext'
 
-export default function HomePage() {
-
-  const {currentUser} = useContext(AuthContext)
+export default function HomePage () {
+  const { currentUser } = useContext(AuthContext)
 
   console.log(currentUser)
   return (
@@ -14,10 +13,14 @@ export default function HomePage() {
         <div className='wrapper'>
           <h1 className='title'>Find Real Estate & Get Your Dream</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-            explicabo suscipit cum eius, iure est nulla animi consequatur
-            facilis id pariatur fugit quos laudantium temporibus dolor ea
-            repellat provident impedit!
+            Welcome to Real Estate, your ultimate destination for finding your
+            dream home. With over 16 years of experience, our team is dedicated
+            to providing you with the best real estate options to suit your
+            needs. Whether you&apos;re looking to buy, sell, or rent, we are here to
+            help you every step of the way. Our platform features a wide range
+            of properties, from cozy apartments to luxurious homes, all ready
+            for you to explore. Discover the perfect property today and make
+            your real estate dreams come true with us!
           </p>
           <SearchBar />
           <div className='boxes'>
@@ -37,11 +40,8 @@ export default function HomePage() {
         </div>
       </div>
       <div className='imgContainer'>
-        <img
-          src='/bg.png'
-          alt=''
-        />
+        <img src='/bg.png' alt='' />
       </div>
     </div>
-  );
+  )
 }
